@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<link rel="icon" type="image/png" href="includes/logo.jpg">
+<link href="css/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="img/stylesheet.css?id=1">
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="js/config.js?id=w" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/inde.css" />
+    <title>Automobile Web App</title>
+</head>
+
+<body style="min-height: 100%;">
+<style>
+
+object {
+    width: 100%;
+    min-height: 100%;
+} 
+</style>
+
+<div data-role="page0" id="page0" style="display:non">
+<div data-role="content" class="logi bod" id="carl" style="background:black; height:100%"><img style="position:absolute; left:40%; top:35%" class="hea" src="img/uib.png"></div>
+
+</div>
+   
+   <div data-role="page" id="page" class="page" style="display:none">
+	<div data-role="header" class="head">
+    <span class="user" id="user" name="user"></span>
+	</div>
+    <div data-role="header" class="line"><a href="#" onclick="closeMeNow()" data-role="button" data-icon="home" data-iconpos="notext">Button</a>
+    
+    </div>
+	<div data-role="content">
+	  <ul data-role="listview" class="mainmenu">
+	    <li><a onclick="signin()"><img src="img/login.png"/>
+	      <h3>Login</h3>
+	      <p>Login to your mobile banking.</p>
+	      </a></li>
+		  <li><a href="https://ebank.igg.biz/app/register.php" target="_blank"><img src="img/about-us.png"/>
+	      <h3>Register</h3>
+	      <p>Sign Up for an Account</p>
+	      </a></li>
+	    <li><a href="#chat"><img src="img/contactus.jpg"/>
+	      <h3>Contact</h3>
+	      <p>Contact Us</p>
+	      </a></li>
+      </ul>	
+			
+	</div>
+	<div data-role="footer" class="footer">
+		<h4>&copy; 2018</br>Developed By:</br>CALLYs CONCEPT</h4>
+	</div>
+</div>
+
+<div data-role="page" style="height:100%" id="page2">
+ 
+<object scroll="no" style="width: 100%; height: auto; overflow : hidden;" data="https://ebank.igg.biz/app/login.php"></object>
+	</div>
+    
+	
+	<div data-role="page" style="height:auto" id="chat">
+		  
+		  <form id="myForm" name="myForm">
+                                    <div class="panel-heading" style="background-color:green;width:100%; padding:1px 10px">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed" style="font-size:18px;color:#FFFFFF">Chat Now<i class="fa fa-wechat" style="font-size:35px;color:#ffffff;margin:-10px; float:right"></i></a>
+                                        </h4>
+										<span style="float:right;margin-top:-40px;margin-right:-5px; color:#FFFFFF; font-size:16px;cursor:pointer;padding-right:30px" onclick='window.location.href="#page"'><b>x</b></span>
+                                    </div>
+                                   
+                                        
+                                            <div class="table-responsive" id="chatbox" style="padding:20px">
+                                <input id="name" name="name" type="text" placeholder="Name" class="form-control" value=""></p>
+                                <input id="email"name="email" type="email" placeholder="Email" class="form-control" value=""></p>
+                                <input id="subject"name="subject" type="text" placeholder="Subject" class="form-control"></p>
+                                <input id="username"name="username" type="hidden" placeholder="" class="form-control" value=""></p>
+                                <textarea id="message"name="message" placeholder="Message" class="form-control"></textarea></p>
+                                <input id="chatsubmit" type="button" class="form-control next1" value="Send Message" onclick="validateForm()">
+                                
+                            </div>
+							<div id="chatmessage" style="display:none;padding:10px" align="center">
+							</br>
+							</br>
+							<p><b style="color:green">Your Message Was Sent Successfully</b></p>
+							<p>All our Agent are currently busy.</p>
+							<p>We would get back to you via your email</p>
+							<p>Thanks</p>
+							<input onclick='javascript:$("#chatmessage").hide();$("#chatbox").show();' type="button" class="form-control next1 collapsed" value="Close Chat" data-toggle="collapse" data-parent="#accordion" href="#page">
+							</br>
+							</br>
+							</div>
+						
+                                   
+                               
+                                </div></form>
+
+
+
+
+   
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
+    <script type="text/javascript" src="js/inde.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

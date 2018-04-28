@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+	min-height: 100%;
+}
+.head{
+	background:url(head.png) top no-repeat;
+	width:inherit;
+	height:120px;
+	margin:auto;
+	background-color:#FFF;
+	text-align:center;
+}
+.line{
+	background:url(line.png);
+	height:40px;
+	margin:auto;
+}
+.bod{
+	background:url(body.jpg) no-repeat;
+	width:100%;
+	height:200px;
+	margin:auto;
+}
+#page, #page2, #page3, #page4, #page5, #page6, #page7{
+	background:url(body.jpg);
+	margin:auto;
+	width:100%;
+	min-height: 100%;
+	height: 100%;
+}
+#page .mainmenu{
+	margin:5px;
+	padding: 0;
+	
+}
+#page .mainmenu li {
+	background: none;
+	border: none;
+}
+#page .mainmenu li a{
+	background: rgba(255,255,255,.7);
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+#page .mainmenu li a:hover{
+	background: rgba(255,255,255,.9);
+}
+.footer{
+	width: 100%;
+	height: 100px;
+	background: #660000;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	padding:0;
+	border: 0;
+	position: absolute;
+}
+.bodycopy{
+	background: rgba(255,255,255,.8);
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+h2{
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+	color: #660000;
+	border-bottom: 2px solid @660000;
+}
+#page6 a{
+	box-shadow: none;
+	border: none;
+	padding: 0;
+	background: rbga(121,24,6,0.5);
+}
+#page6 a:hover{
+	background: rbga(121,24,6,0.5);
+}
+.ui-grid-a{
+	padding:5px
+	}
+.ui-block-b{
+	height:20px;
+	padding-top:5px;
+	}
+.link a{
+	margin:auto;
+	text-decoration: none;
+}
+.login{
+	background: rgba(255,255,255,.8);
+	border-radius: 5px;
+	padding: 10px;
+	padding-bottom: 50px;
+	margin: 10px;
+	text-align: center;
+	width:auto;
+	height:auto;
+overflow:hidden;
+}
+.btn{
+	margin:auto;
+	text-align: center;
+	width:90%;
+	padding-bottom:10px;
+	padding-top:5px;
+}
+.place{
+	text-align: center;
+	
+}
+
+.fieldcontain h3{
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+	color: #660000;
+	border-bottom: 1px dotted #660000;
+}
+.usern{
+	color:#000000; 
+	position:absolute; 
+	bottom:0; 
+	right:40%; 
+	left:0%; 
+	width:inherit;
+	font-size:20px;
+	text-decoration:none;
+	text-shadow:none;
+}
